@@ -2,28 +2,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>1</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <style>
-        p {
+        b {
             font-size: 20px;
-            padding: 30px;
         }
 
-        a {
-            font-size: 14px;
-        }
 
-        hr {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            border: 1;
-            border-top: 2px solid rgba(0, 0, 0, .1);
-        }
         img{
             width: 100%;
         }
@@ -43,8 +33,8 @@
             let end = "<div class='container mt-5'>"+"<div class='row' style='margin-top:10px;'>";
             a = data.tracks.items
             for (let i = 0; i < a.length ; i++) {
-                word += "<div class='col-md-4' style='margin-bottom:50px;border:1px;'>"+"<div class='card'>"+"<img src='"+data.tracks.items[i].album.images[0].url+"'>" + "<div class='card-body  pl-3 pr-3'>"+"<b>"+a[i].album.name +"</b><br>"+ "Artist : " + a[i].album.artists[0].name + "<br>" + "Release date : " + a[i].album.release_date
-                + "<br>" + "Available :" + a[0].album.available_markets.length + "countries"+ "</div>"+"</div>"+"</div>"
+                word += "<div class='col-md-4' style='margin-bottom:50px;border:1px;'>"+"<div class='card'>"+"<img src='"+data.tracks.items[i].album.images[0].url+"'>" + "<div class='card-body  pl-3 pr-3'>"+"<b>"+a[i].album.name +"</b><br><p><p>"+ "Artist : " + a[i].album.artists[0].name + "<br>" + "Release date : " + a[i].album.release_date
+                + "<br>" + "Available : " + a[0].album.available_markets.length + "countries"+ "</p></div>"+"</div>"+"</div>"
             }
             end += word+"</div>";
             document.body.innerHTML = end;
